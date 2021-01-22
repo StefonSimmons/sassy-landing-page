@@ -104,6 +104,16 @@ $color-2: green
 <br/>
 
 
+## Setup
+1. Install Sass via the CLI (w/ Homebrew)
+    * brew install sass/sass/sass
+
+1. Compile Sass to CSS. 
+    * Install a Sass Extension (**Live Sass Compiler**)   
+    OR
+    * run sass --watch input-file.sass output-file.css
+
+
 ## Why Develop with Sass?
 <img src="./images/why_dog.png" alt="question" width="100px">
 
@@ -221,3 +231,4 @@ html, body {
 
 
 ## Sass styling with bootstrap
+
