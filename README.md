@@ -68,22 +68,30 @@ body
 
 <br/>
 
-#### Functions (built-in modules)
+#### Functions (from built-in sass modules)
 > https://sass-lang.com/documentation/modules
 
 <details>
-<summary>Color Module Example (complement function)</summary>
+<summary>Complement Function Example (Color Module)</summary>
 
 ```sass
-$color-1: red
-$color-2: greem
+<!-- Mixin -->
+=color-box-style($bg-color)
+  width: 200px
+  height: 200px
+  background: $bg-color
 
+<!-- Variables -->
+$color-1: red
+$color-2: green
+
+<!-- Styles -->
 .color-box-1
   +color-box-style($color-1)
-  color: complement($color-1)
+  color: complement($color-1) // <- function
 .color-box-2
   +color-box-style($color-2)
-  color: complement($color-2)
+  color: complement($color-2) // <- function
 
 ```
 </details>
