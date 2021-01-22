@@ -69,7 +69,7 @@ body
 <br/>
 
 #### Functions (from built-in sass modules)
-> https://sass-lang.com/documentation/modules
+> Incorporate pre-built functions into your styles easily. https://sass-lang.com/documentation/modules
 
 <details>
 <summary>Complement Function Example (Color Module)</summary>
@@ -98,58 +98,34 @@ $color-2: green
 
 <br/>
 
-#### Inheritance 
-> benefit
-<details>
-<summary>Inheritance Example</summary>
-
-```sass
-%message-shared
-  border: 1px solid #ccc
-  padding: 10px
-  color: #333
-
-.message
-  @extend %message-shared
-
-
-.success
-  @extend %message-shared
-  border-color: green
-
-
-.error
-  @extend %message-shared
-  border-color: red
-
-```
-</details>
+#### THERES SO MUCH MORE
+[Sass Docs](https://sass-lang.com/documentation)
 
 <br/>
 
-## Why would we use Sass?
-- DRY styles / Organized
+
+## Why Develop with Sass?
+<img src="./images/why_dog.png" alt="question" width="100px">
+
+- DRY / Organized styles
 - Scalable / Modular
 - Maintainable
-- It's famous!
+- It's popular!
 
-### DRY styling
-Extending/ Inheriting Styles 
-
-### Scalable
-Import smaller/more practical stylesheets into one stylesheet vs having a large plain CSS imports
-
-- Importing styles via Sass means the browser only makes one HTTP request as it renders your web page
-- Importing via basic CSS makes multiple requests if you have multiple style sheets.
-
-### Maintainable
-Nested syntax allows for organized styling where you can group styles for sections or components in relation to the box model.
+> Use Variables and Mixins to practice DRY code. When working on larger projects, build smaller - more practical stylesheets that take advantage of nested syntax (grouping like content). @import them into one .sass stylesheet for a modular application. These benefits mean that it becomes easier to manage your application content.
 
 <br/>
 
-## Sass vs Scss vs CSS
-CSS
+### Sass vs CSS
+
+#### HTTP REQUESTS
+
+- Developing with multiple Sass files means the browser still only makes one HTTP request for a stylesheet. Scss outputs all css into one .css file
+- Developing with multiple CSS files means the website visitor's browser is making multiple HTTP requests 
+- Sass is great for larger projects and teams
+- Less syntax
 Scss will look more familiar because it uses **{ }** and **;**
+- You can customize Bootstrap 4 with Sass. https://getbootstrap.com/docs/5.0/customize/sass/
 
 - **Sass** files end in the _.sass_ extension
 - **Scss** files end in the _.scss_ extension
@@ -158,7 +134,10 @@ Both need to be compiled to CSS
 
 <br/>
 
-Sass Syntax Example:
+## What is Scss {Sassy CSS}?
+> Scss and Sass are essentially the same. Below are some of the differences in syntax.
+
+#### Sass Syntax Example:
 
 ```sass
 @import "section"
@@ -181,7 +160,7 @@ html, body
     font-weight: 700
 ```
 
-Scss Syntax Example:
+#### Scss Syntax Example:
 
 ```scss
 @import "section"
@@ -206,7 +185,7 @@ html, body{
 }
 ```
 
-CSS Syntax Example:
+#### CSS Syntax Example:
 
 ```css
 .section {
@@ -239,15 +218,6 @@ html, body {
 }
 ```
 
-## Setup
-1. Install Sass via the CLI (w/ Homebrew)
-    * brew install sass/sass/sass
 
-1. Compile Sass to CSS. 
-    * Install a Sass Extension (**Live Sass Compiler**)   
-    OR
-    * run sass --watch input-file.sass output-file.css
-
-1. 
 
 ## Sass styling with bootstrap
