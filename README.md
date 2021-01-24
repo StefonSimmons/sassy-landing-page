@@ -56,13 +56,13 @@ body
   height: 200px
   background: $bg-color
   
-  .red-box
-    +color-box-style(red)
-    color: cyan
+.red-box
+  +color-box-style(red)
+  color: cyan
 
-  .green-box
-    +color-box-style(green)
-    color: purple
+.green-box
+  +color-box-style(green)
+  color: purple
 ```
 </details>
 
@@ -108,11 +108,16 @@ $color-2: green
 1. Install Sass via the CLI (w/ Homebrew)
     * brew install sass/sass/sass
 
+1. Start web app project. (i.e. create-react-app)
+1. (Recommended) create a folder called **'styles'** in your src folder (if a react-app)
+1. Inside the styles folder, create two files: 
+    * main.sass
+    * main.css
 1. Compile Sass to CSS. 
     * Install a Sass Extension (**Live Sass Compiler**)   
     OR
-    * run sass --watch input-file.sass output-file.css
-
+    * run sass --watch *input-file.sass* *output-file.css*
+    >'input-file.sass' is the main.sass file and 'output-file' is the main.css file
 
 ## Why Develop with Sass?
 <img src="./images/why_dog.png" alt="question" width="100px">
@@ -128,23 +133,20 @@ $color-2: green
 
 ### Sass vs CSS
 
-#### HTTP REQUESTS
-
-- Developing with multiple Sass files means the browser still only makes one HTTP request for a stylesheet. Scss outputs all css into one .css file
-- Developing with multiple CSS files means the website visitor's browser is making multiple HTTP requests 
+- Developing with multiple Sass files means the browser still only makes one HTTP request for a stylesheet. Sass outputs all css into one .css file
+    - Developing with multiple CSS files means the website visitor's browser is making multiple HTTP requests 
 - Sass is great for larger projects and teams
-- Less syntax
-Scss will look more familiar because it uses **{ }** and **;**
+- Less syntax. Scss will look more familiar because it uses **{ }** and **;**
 - You can customize Bootstrap 4 with Sass. https://getbootstrap.com/docs/5.0/customize/sass/
-
-- **Sass** files end in the _.sass_ extension
-- **Scss** files end in the _.scss_ extension
-
-Both need to be compiled to CSS
 
 <br/>
 
 ## What is Scss {Sassy CSS}?
+
+- **Sass** files end in the _.sass_ extension
+- **Scss** files end in the _.scss_ extension
+
+> Both need to be compiled to CSS
 > Scss and Sass are essentially the same. Below are some of the differences in syntax.
 
 #### Sass Syntax Example:
@@ -228,6 +230,6 @@ html, body {
 }
 ```
 
-## Sass styling with Bootstrap 4
+## Bootstrap 4 customization w/ Sass
 
 https://getbootstrap.com/docs/5.0/customize/sass/
