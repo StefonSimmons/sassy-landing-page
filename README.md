@@ -61,7 +61,7 @@ main
 </details>
 
 <details>
-<summary>Nesting CSS Example</summary>
+<summary>Nesting Sass Example</summary>
 
 ```sass
 $helvetica-font: Helvetica, sans-serif
