@@ -119,6 +119,7 @@ $color-1: red
 $color-2: green
 ```
 ```sass
+// main.sass
 @import 'mixins', 'variables'
 
 .color-box-1
