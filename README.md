@@ -6,7 +6,7 @@
 
 ## Prerequisites
 - Proficiency in CSS
-- Proficiency in at a programming language (i.e. Javascript, Ruby or Python)
+- Proficiency in a programming language (i.e. Javascript, Ruby or Python)
 
 ## Objectives
 
@@ -22,7 +22,7 @@ By the end of this lesson students will be able to:
 
 Sass is a feature-rich CSS extension language and pre-processor for creating styled variables, mixins, and modules. Sass also enables CSS selector nesting and inheritance.
 
-It incorporates the basic benefits of programming languages into your style sheets.
+It incorporates the basic benefits of programming languages into your stylesheets.
 
 <img src="https://media.giphy.com/media/CcwLAV11cALh3OuEJ5/giphy.gif" alt="keep coding" width="300px">
 
@@ -98,26 +98,46 @@ $color-2: green
 
 <br/>
 
-#### THERES SO MUCH MORE
-[Sass Docs](https://sass-lang.com/documentation)
+#### @Imports
+> The @import rule enables you to modularize your style code. Import multiple Sass stylesheets into another (similar to how you import react components)
+
+<details>
+<summary>@import Example</summary>
+
+```sass
+// _mixins.sass
+
+=color-box-style($bg-color)
+  width: 200px
+  height: 200px
+  background: $bg-color
+```
+```sass
+// _variables.sass
+
+$color-1: red
+$color-2: green
+```
+```sass
+@import 'mixins', 'variables'
+
+.color-box-1
+  +color-box-style($color-1)  // <- mixin and variable
+  color: complement($color-1) // <- function and variable
+.color-box-2
+  +color-box-style($color-2)
+  color: complement($color-2) // <- function
+
+```
+</details>
 
 <br/>
 
 
-## Setup
-1. Install Sass via the CLI (w/ Homebrew)
-    * brew install sass/sass/sass
+#### THERES SO MUCH MORE
+[Sass Docs](https://sass-lang.com/documentation)
 
-1. Start web app project. (i.e. create-react-app)
-1. (Recommended) create a folder called **'styles'** in your src folder (if a react-app)
-1. Inside the styles folder, create two files: 
-    * main.sass
-    * main.css
-1. Compile Sass to CSS. 
-    * Install a Sass Extension (**Live Sass Compiler**)   
-    OR
-    * run sass --watch *input-file.sass* *output-file.css*
-    >'input-file.sass' is the main.sass file and 'output-file' is the main.css file
+<br/>
 
 ## Why Develop with Sass?
 <img src="./images/why_dog.png" alt="question" width="100px">
@@ -141,6 +161,32 @@ $color-2: green
 
 <br/>
 
+## Setup
+1. Install Sass via the CLI (w/ Homebrew)
+    * brew install sass/sass/sass
+
+1. Start web app project. (i.e. create-react-app)
+1. (Recommended) create a folder called **'styles'** in your src folder (if a react-app)
+1. Inside the styles folder, create two files: 
+    * main.sass
+    * main.css
+1. Compile Sass to CSS. 
+    * Install a Live Sass Compiler Extension (**ritwickdey.live-sass**)   
+    OR
+    * inside the styles folder, run "sass --watch *input-file.sass* *output-file.css*"
+    >'input-file.sass' is the main.sass file and 'output-file' is the main.css file
+1. Install a Sass Indentation and Syntax Highlighting Extension (**syler.sass-indented**)
+
+<br/>
+
+## You Do: 
+> 1. Fork (optional)
+> 1. Clone this repo
+> 1. cd into the ***client*** folder and run **npm i** 
+> 1. Follow the setup Sass directions above and try to create this landing page using Sass syntax 
+<img src="./images/sass-landing-mockup.png" alt="sass-mockup">
+
+
 ## What is Scss {Sassy CSS}?
 
 - **Sass** files end in the _.sass_ extension
@@ -149,7 +195,10 @@ $color-2: green
 > Both need to be compiled to CSS
 > Scss and Sass are essentially the same. Below are some of the differences in syntax.
 
-#### Sass Syntax Example:
+#### Sass Syntax 
+
+<details>
+<summary>Example:</summary>
 
 ```sass
 @import "section"
@@ -171,8 +220,13 @@ html, body
     font-size: 24px
     font-weight: 700
 ```
+</details>
+
+<br/>
 
 #### Scss Syntax Example:
+<details>
+<summary>Example:</summary>
 
 ```scss
 @import "section"
@@ -196,8 +250,14 @@ html, body{
   }
 }
 ```
+</details>
+
+<br/>
 
 #### CSS Syntax Example:
+
+<details>
+<summary>Example:</summary>
 
 ```css
 .section {
@@ -229,6 +289,9 @@ html, body {
   font-weight: 700;
 }
 ```
+</details>
+
+<br/>
 
 ## Bootstrap 4 customization w/ Sass
 
