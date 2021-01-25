@@ -36,9 +36,45 @@ It incorporates the basic benefits of programming languages into your stylesheet
 $helvetica-font: Helvetica, sans-serif
 $primary-color: #333
 
-body
+main
   font-family: $helvetica-font
   color: $primary-color
+```
+</details>
+
+<br/>
+
+#### Nesting
+> Group Selectors according to their position on the DOM tree
+
+<details>
+<summary>Nesting HTML Example</summary>
+
+```html
+<main>
+  <nav className="main-nav">
+    .
+    .
+  </nav>
+</main>
+```
+</details>
+
+<details>
+<summary>Nesting CSS Example</summary>
+
+```sass
+$helvetica-font: Helvetica, sans-serif
+$primary-color: #333
+
+main
+  font-family: $helvetica-font
+  color: $primary-color
+
+  .main-nav
+    height: 60px
+    display: flex
+    flex-direction: row
 ```
 </details>
 
