@@ -193,7 +193,7 @@ $color-2: green
 - Developing with multiple Sass files means the browser still only makes one HTTP request for a stylesheet. Sass outputs all css into one .css file
     - Developing with multiple CSS files means the visitor's browser is making multiple HTTP requests 
 - Sass is great for larger projects and teams
-- Less syntax. Scss will look more familiar because it uses **{ }** and **;**
+- Less syntax
 - You can customize Bootstrap 4 with Sass. https://getbootstrap.com/docs/5.0/customize/sass/
 
 <br/>
