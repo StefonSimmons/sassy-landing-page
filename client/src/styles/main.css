@@ -369,6 +369,13 @@ textarea {
   grid-column: 1/span 2;
   grid-row: 1/span 3;
   border-radius: 15px 15px 0 0;
+  margin-bottom: 18px;
+}
+@media (max-width: 728px) {
+  .box-1 {
+    grid-column: 1;
+    border-radius: 0;
+  }
 }
 .box-1 h1 {
   font-size: 28px;
@@ -393,7 +400,12 @@ textarea {
 .box-2 {
   background: #2ab2af;
   border-radius: 0 0 0 15px;
-  grid-row: 4/span 5;
+  grid-row: 4/span 4;
+}
+@media (max-width: 728px) {
+  .box-2 {
+    border-radius: 0;
+  }
 }
 .box-2 h3 {
   font-size: 24px;
@@ -412,6 +424,11 @@ textarea {
   color: white;
   margin-bottom: 0;
   flex-basis: 33.3333333333%;
+}
+@media (max-width: 728px) {
+  .box-2 section #big-price {
+    flex-basis: 16.6666666667%;
+  }
 }
 .box-2 section #big-price-text {
   font-size: 20px;
@@ -441,7 +458,13 @@ textarea {
 .box-3 {
   background: #5abfbd;
   border-radius: 0 0 15px 0;
-  grid-row: 4/span 5;
+  grid-row: 4/span 4;
+}
+@media (max-width: 728px) {
+  .box-3 {
+    grid-row: 8/span 4;
+    border-radius: 0;
+  }
 }
 .box-3 h3 {
   font-size: 24px;
@@ -464,15 +487,26 @@ html, body {
   height: 100vh;
   font-family: "Karla", sans-serif;
 }
+@media (max-width: 728px) {
+  html, body {
+    height: auto;
+  }
+}
 
 .container {
   height: auto;
-  width: 50vw;
+  max-width: 722px;
   display: grid;
   grid-template-rows: repeat(7, 1fr);
   grid-template-columns: repeat(2, 1fr);
   box-shadow: 0 0 25px #98a6bd;
   border-radius: 15px;
+}
+@media (max-width: 728px) {
+  .container {
+    grid-template-rows: repeat(11, 1fr);
+    grid-template-columns: 1fr;
+  }
 }
 .container div {
   box-sizing: border-box;
